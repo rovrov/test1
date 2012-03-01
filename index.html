@@ -1,6 +1,7 @@
 <h2>Test</h2>
 
 <p>asd</p>
+<!-->
 <script type="text/javascript">
 function foo(response) {
   var meta = response.meta
@@ -13,3 +14,16 @@ function foo(response) {
  <script type="text/javascript"
          src="https://api.github.com?callback=foo">
  </script>
+<-->
+<script>
+var oRequest = new XMLHttpRequest();
+var sURL = "https://raw.github.com/wiki/7vies/test1/Example.md";
+
+oRequest.open("GET",sURL,false);
+oRequest.setRequestHeader("User-Agent",navigator.userAgent);
+oRequest.send(null)
+
+if (oRequest.status==200) alert(oRequest.responseText);
+else alert("Error executing XMLHttpRequest call!");
+
+</script>
