@@ -1,4 +1,15 @@
 <h2>Test</h2>
 
 <p>asd</p>
-<iframe name="inlineframe" src="https://raw.github.com/wiki/7vies/test1/Example.md" frameborder="0" scrolling="auto" width="500" height="400" marginwidth="5" marginheight="5" ></iframe>
+<script type="text/javascript">
+function foo(response) {
+  var meta = response.meta
+  var data = response.data
+  //console.log(meta)
+  //console.log(data)
+  document.write(meta['X-RateLimit-Remaining'])
+}
+</script>
+ <script type="text/javascript"
+         src="https://api.github.com?callback=foo">
+ </script>
